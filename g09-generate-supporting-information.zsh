@@ -46,17 +46,17 @@ do
 	# get information
 	file_basename=$(basename "$file" .out)
 	local image="$file_basename.jpg"
-	local stoichiometry=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-stoichiometry.zsh "$file")
-	local basis_functions=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-number-of-basis-functions.zsh "$file")
-	local thermal_energies=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-sum-of-electronic-and-thermal-energies.zsh "$file")
-	local zero_point_energies=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-sum-of-electronic-and-zero-point-energies.zsh "$file")
-	local enthalpies=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-sum-of-electronic-and-thermal-enthalpies.zsh "$file")
-	local free_energies=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-sum-of-electronic-and-thermal-free-energies.zsh "$file")
-	local number_imaginary_frequencies=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-number-of-imaginary-frequencies.zsh "$file")
-	local alpha_beta_electrons=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-mean-of-alpha-and-beta-electrons.zsh "$file")
+	local stoichiometry=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-stoichiometry.zsh "$file")
+	local basis_functions=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-number-of-basis-functions.zsh "$file")
+	local thermal_energies=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-sum-of-electronic-and-thermal-energies.zsh "$file")
+	local zero_point_energies=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-sum-of-electronic-and-zero-point-energies.zsh "$file")
+	local enthalpies=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-sum-of-electronic-and-thermal-enthalpies.zsh "$file")
+	local free_energies=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-sum-of-electronic-and-thermal-free-energies.zsh "$file")
+	local number_imaginary_frequencies=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-number-of-imaginary-frequencies.zsh "$file")
+	local alpha_beta_electrons=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-mean-of-alpha-and-beta-electrons.zsh "$file")
 
 	function get_cartesians() {
-		${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-cartesians.py "$file"
+		${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-cartesians.py "$file"
 		cat "$file".xyz
 	}
 	cartesians=$(get_cartesians "$file")

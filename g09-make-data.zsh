@@ -10,23 +10,23 @@ output_directory_prefix=$HOME/Desktop
 function stat()
 {
 	filename=$(print "${1}")
-	local check_point_file_name=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-check-point-file-name.zsh "${1}")
-	local title_card=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-title-card.zsh "${1}")
-	local stoichiometry=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-stoichiometry.zsh "${1}")
-	local converged_point_group=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-converged-point-group.zsh "${1}")
-	local number_imaginary_frequencies=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-number-of-imaginary-frequencies.zsh "${1}")
-	local lowest_imaginary_frequency=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-lowest-imaginary-frequency.zsh "${1}")
-	local electronic_energy_after_SDF_is_done=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-electronic-energy-after-sdf-is-done.zsh "${1}")
-	local zero_point_energies=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-sum-of-electronic-and-zero-point-energies.zsh "${1}")
-	local enthalpies=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-sum-of-electronic-and-thermal-enthalpies.zsh "${1}")
-	local free_energies=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-sum-of-electronic-and-thermal-free-energies.zsh "${1}")
-	local basis_functions=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-number-of-basis-functions.zsh "${1}")
-	local alpha_beta_electrons=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-mean-of-alpha-and-beta-electrons.zsh "${1}")
-	local spin_contamination_before_annihilation=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-spin-contamination-before-annihilation.zsh "${1}")
-	local spin_contamination_after_annihilation=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-spin-contamination-after-annihilation.zsh "${1}")
-	local oniom_extrapolated_energy=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-oniom-extrapolated-energy.zsh "${1}")
-	local mm_sanity_check__sum_of_all_charges=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-mm-sanity-check--sum-of-all-charges.zsh "${1}")
-	local mm_sanity_check__sum_of_atom_charges=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-mm-sanity-check--sum-of-atom-charges.zsh "${1}")
+	local check_point_file_name=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-check-point-file-name.zsh "${1}")
+	local title_card=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-title-card.zsh "${1}")
+	local stoichiometry=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-stoichiometry.zsh "${1}")
+	local converged_point_group=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-converged-point-group.zsh "${1}")
+	local number_imaginary_frequencies=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-number-of-imaginary-frequencies.zsh "${1}")
+	local lowest_imaginary_frequency=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-lowest-imaginary-frequency.zsh "${1}")
+	local electronic_energy_after_SDF_is_done=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-electronic-energy-after-sdf-is-done.zsh "${1}")
+	local zero_point_energies=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-sum-of-electronic-and-zero-point-energies.zsh "${1}")
+	local enthalpies=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-sum-of-electronic-and-thermal-enthalpies.zsh "${1}")
+	local free_energies=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-sum-of-electronic-and-thermal-free-energies.zsh "${1}")
+	local basis_functions=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-number-of-basis-functions.zsh "${1}")
+	local alpha_beta_electrons=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-mean-of-alpha-and-beta-electrons.zsh "${1}")
+	local spin_contamination_before_annihilation=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-spin-contamination-before-annihilation.zsh "${1}")
+	local spin_contamination_after_annihilation=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-spin-contamination-after-annihilation.zsh "${1}")
+	local oniom_extrapolated_energy=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-oniom-extrapolated-energy.zsh "${1}")
+	local mm_sanity_check__sum_of_all_charges=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-mm-sanity-check--sum-of-all-charges.zsh "${1}")
+	local mm_sanity_check__sum_of_atom_charges=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-mm-sanity-check--sum-of-atom-charges.zsh "${1}")
 
 	echo "$filename, $check_point_file_name, $title_card, $stoichiometry, $converged_point_group, $number_imaginary_frequencies, $lowest_imaginary_frequency, $electronic_energy_after_SDF_is_done, $zero_point_energies, $zero_point_energies, $free_energies, $basis_functions, $alpha_beta_electrons, $spin_contamination_before_annihilation, $spin_contamination_after_annihilation, $oniom_extrapolated_energy, $mm_sanity_check__sum_of_all_charges, $mm_sanity_check__sum_of_atom_charges"
 }
@@ -47,7 +47,7 @@ function data()
 # imaginary frequency exists
 function warning_imaginary_frequencies()
 {
-    test=$(${GAUSSIAN_TOOLS_DOT_DIRECTORY:-$HOME/bin}/g09-number-of-imaginary-frequencies.zsh "${1}")
+    test=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-number-of-imaginary-frequencies.zsh "${1}")
 	if [[ -n $test ]] then
 		echo "The following file contains an imaginary frequency:  $file"
 	fi
