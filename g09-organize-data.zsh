@@ -4,9 +4,9 @@ set  -f
 #
 # This script will gather all Gaussian output files and test whether or not they terminated correctly (by testing if "Normal" is present at the end of the file. The script will notify you of both normally terminated jobs and those that aren't. Additionally, it will both archive and organize your input and output files as follows:
 #
-# | Archive  | .gjf and .out            | $HOME/research/archive/$date/foo
-# | Organize | .gjf and .out            | $HOME/research/finished_jobs/foo
-# | Trash    | .chk, .e, .o, and others | $HOME/.Trash
+# | Archive  | .gjf, .chk and .out            | $HOME/research/archive/$date/foo
+# | Organize | .gjf, .chk and .out            | $HOME/research/finished_jobs/foo
+# | Trash    | .e, .o, and others | $HOME/.Trash
 #
 # NOTE: All files are organized based upon the file's basename! (i.e., foo.gjf, foo.out, foo.chk, foo.e.12345 and foo.o.12345 will all be parsed as one job; if, however, I had bar.chk instead, then bar.chk would be ignored by the script--unless there is a file name bar.out)
 #
@@ -110,12 +110,13 @@ then
 	# organize data and remove junk
 	less /tmp/move_list.tmp | awk '{print "cp "$0"out '$directory_finished_jobs'"}' | zsh
 	less /tmp/move_list.tmp | awk '{print "cp "$0"gjf '$directory_finished_jobs'"}' | zsh
+	less /tmp/move_list.tmp | awk '{print "cp "$0"chk '$directory_finished_jobs'"}' | zsh
 	less /tmp/move_list.tmp | awk '{print "mv "$0"* '$trash'"}' | zsh
 
 	# move data to archive for safekeeping
 	date_time_stamp=$(date "+%Y-%m-%d at %H%M.%S hrs")
 	mkdir -p "$directory_archive/$date_time_stamp"
-	cp $directory_finished_jobs/* "$directory_archive/$date_time_stamp"
+	cp "$directory_finished_jobs"/* "$directory_archive/$date_time_stamp"
 fi
 
 # clean up
@@ -140,5 +141,6 @@ then
 fi
 
 success "Script completed."
+
 
 
