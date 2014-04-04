@@ -110,6 +110,7 @@ then
 	# organize data and remove junk
 	less /tmp/move_list.tmp | awk '{print "cp "$0"out '$directory_finished_jobs'"}' | zsh
 	less /tmp/move_list.tmp | awk '{print "cp "$0"gjf '$directory_finished_jobs'"}' | zsh
+	less /tmp/move_list.tmp | awk '{print "unarchive "$0"gz '$directory_finished_jobs'"}' | zsh
 	less /tmp/move_list.tmp | awk '{print "cp "$0"chk '$directory_finished_jobs'"}' | zsh
 	less /tmp/move_list.tmp | awk '{print "mv "$0"* '$trash'"}' | zsh
 
