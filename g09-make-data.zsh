@@ -48,7 +48,7 @@ function data()
 function warning_imaginary_frequencies()
 {
     test=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-number-of-imaginary-frequencies.zsh "${1}")
-	if [[ -n $test ]] then
+	if [[ ! $test == "-----" ]] then
 		echo "The following file contains an imaginary frequency:  $file"
 	fi
 }
