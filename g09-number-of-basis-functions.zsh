@@ -7,7 +7,7 @@ set  -f
 
 function g09-number-of-basis-functions()
 {
-	local data=$(awk '/symmetry adapted basis functions/ { result = $3 } END {print result}' "${1}")
+	local data=$(awk '/basis functions,/ { result = $1 } END {print result}' "${1}")
 
 	"${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-data-test.zsh" $data
 }
