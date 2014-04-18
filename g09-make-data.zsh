@@ -29,13 +29,13 @@ function stat()
 	local mm_sanity_check__sum_of_all_charges=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-mm-sanity-check--sum-of-all-charges.zsh "${1}")
 	local mm_sanity_check__sum_of_atom_charges=$(${GAUSSIAN_TOOLS_DIRECTORY:-$HOME/bin}/g09-mm-sanity-check--sum-of-atom-charges.zsh "${1}")
 
-	echo "$filename, $check_point_file_name, $title_card, $stoichiometry, $converged_point_group, $number_imaginary_frequencies, $lowest_imaginary_frequency, $electronic_energy_after_SDF_is_done, $zero_point_energies, $energies, $enthalpies, $free_energies, $basis_functions, $alpha_beta_electrons, $spin_contamination_before_annihilation, $spin_contamination_after_annihilation, $oniom_extrapolated_energy, $mm_sanity_check__sum_of_all_charges, $mm_sanity_check__sum_of_atom_charges"
+	echo "$filename,$check_point_file_name,$title_card,$stoichiometry,$converged_point_group,$number_imaginary_frequencies,$lowest_imaginary_frequency,$electronic_energy_after_SDF_is_done,$zero_point_energies,$energies,$enthalpies,$free_energies,$basis_functions,$alpha_beta_electrons,$spin_contamination_before_annihilation,$spin_contamination_after_annihilation,$oniom_extrapolated_energy,$mm_sanity_check__sum_of_all_charges,$mm_sanity_check__sum_of_atom_charges"
 }
 
 # make a .csv worksheet
 function data()
 {
-    echo "FILENAME, CHECK POINT FILE NAME, TITLE CARD, STOICHIOMETRY, CONVERGED POINT GROUP, NUMBER OF IMAGINARY FREQUENCIES, LOWEST IMAGINARY FREQUENCY, ELECTRONIC ENERGY AFTER SDF IS DONE, SUM OF ELECTRONIC AND ZERO-POINT ENERGIES, SUM OF ELECTRONIC AND THERMAL ENERGIES, SUM OF ELECTRONIC AND THERMAL ETHALPIES, SUM OF ELECTRONIC AND THERMAL FREE ENERGIES, NUMBER OF BASIS FUNCTIONS, MEAN OF ALPHA AND BETA ELECTRONS, SPIN CONTAMINATION BEFORE ANNIHILATION, SPIN CONTAMINATION AFTER ANNIHILATION, ONIOM EXTRAPOLATED ENERGY, (MM SANITY CHECK) SUM OF ALL CHARGES, (MM SANITY CHECK) SUM OF ATOMS' CHARGES"
+    echo "FILENAME,CHECK POINT FILE NAME,TITLE CARD,STOICHIOMETRY,CONVERGED POINT GROUP,NUMBER OF IMAGINARY FREQUENCIES,LOWEST IMAGINARY FREQUENCY,ELECTRONIC ENERGY AFTER SDF IS DONE,SUM OF ELECTRONIC AND ZERO-POINT ENERGIES,SUM OF ELECTRONIC AND THERMAL ENERGIES,SUM OF ELECTRONIC AND THERMAL ETHALPIES,SUM OF ELECTRONIC AND THERMAL FREE ENERGIES,NUMBER OF BASIS FUNCTIONS,MEAN OF ALPHA AND BETA ELECTRONS,SPIN CONTAMINATION BEFORE ANNIHILATION,SPIN CONTAMINATION AFTER ANNIHILATION,ONIOM EXTRAPOLATED ENERGY,(MM SANITY CHECK) SUM OF ALL CHARGES,(MM SANITY CHECK) SUM OF ATOMS' CHARGES"
 	for file in "$@"; do
         [ -f "$file" ] && stat "$file"
 	done
