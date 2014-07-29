@@ -1,9 +1,10 @@
 #!/usr/bin/env zsh
 set  -f
 #
-# This script will generate supporting information for a computational chemistry paper.
+# This script will generate supporting information for a computational chemistry paper. It requires the use of a filelist so that the job inputs may be ordered in the final document.
 #
 
+local file_list="$@"
 #
 # Metadata
 #
@@ -33,13 +34,19 @@ $address
 ## Table of Contents
 <!--TOC-->
 
+## Foreword
+
+Stoichiometry indicates the computed multiplicity (if other than singlet) in parentheses.  Cartesian coordinates are given in Angstroms (Å). Energetic quantities are quoted in Hartrees.
+
+---
+
 " >> $supporting_information
 
 #
 # Bring in the molecules, one by one per page...
 #
 
-for file in "$@"
+while read file
 do
 	[ -f "$file" ] || die "Invalid file type ($file). Exiting because SI can't be corrupted..."
 
@@ -103,9 +110,7 @@ $cartesians
 </table>
 
 "
-
-done >> $supporting_information
-
+done < $file_list >> $supporting_information
 #
 # Gaussian 09 reference
 #
