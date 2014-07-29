@@ -83,6 +83,6 @@ warning *out
 dos2unix -q *out
 data *out > data.csv
 open data.csv
-mv *out $output_directory_prefix
-mv *gjf $output_directory_prefix
+# mv *out $output_directory_prefix
+# mv *gjf $output_directory_prefix
 
