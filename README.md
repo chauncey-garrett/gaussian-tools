@@ -43,11 +43,12 @@ My hope is to learn a good bit of coding as I make these scripts. I currently us
 
 I typically stay on the bleeding edge of computing. I created these and have tested them using the following:
 
-| Program | Version  |
-| ---     | ---      |
-| zsh     | >= 5.0.2 |
-| python  | == 2.7.5 |
-| GNU awk | >= 4.1.0 |
+| Program  | Version                    |
+| ---      | ---                        |
+| zsh      | >= 5.0.2                   |
+| python   | == 2.7.5                   |
+| GNU awk  | >= 4.1.0                   |
+| Gaussian | Gaussian 09, Revision D.01 |
 
 ## Like it?
 
@@ -59,7 +60,7 @@ Add it to your toolbox; If not, open an [issue!][issue_tracker]
 
   - [Chauncey Garrett][chauncey-garrett]
 
-[gaussian]:          http://www.gaussian.com "Gaussian" 
+[gaussian]:          http://www.gaussian.com "Gaussian"
 [issue_tracker]:     https://github.com/chauncey-garrett/gaussian-tools/issues "chauncey-garrett/gaussian-tools/issues"
 [chauncey-garrett]:  https://github.com/chauncey-garrett "chauncey-garrett"
 
