@@ -27,6 +27,7 @@ My hope is to learn a good bit of coding as I make these scripts. I currently us
 | `g09-number-of-imaginary-frequencies`             | Number of imaginary frequencies in converged geometry                                               |
 | `g09-oniom-extrapolated-energy`                   | ONIOM extrapolated energy                                                                           |
 | `g09-organize-data`                               | Organize the completed jobs on a server into those that terminated correctly and those that haven't |
+| `g09-revision`                                    | Grab the revision of Gaussian used to run the job                                                   |
 | `g09-route-section`                               | Route information of input file                                                                     |
 | `g09-spin-contamination-after-annihilation`       | Spin contamination after annihilation                                                               |
 | `g09-spin-contamination-before-annihilation`      | Spin contamination before annihilation                                                              |
