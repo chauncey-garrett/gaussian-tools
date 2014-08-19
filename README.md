@@ -2,11 +2,21 @@
 
 #### Useful tools written for [Gaussian][gaussian] (an electronic structure program for computational chemistry).
 
-These tools work for me; they may not work for you. Since using this scripts can have a HUGE impact on your research, I suggest you have a look at each of them to full understand their implications to your work flow. That being said, I personally use them and have tested them to the best of my ability/experience. Of course, if you find a better way to do things then by all means share by opening an [issue!][issue_tracker]
+These tools work for me; they may not work for you. Since using this scripts can have a HUGE impact on your research, I suggest you have a look at each of them to full understand their implications to your work flow. That being said, I personally use them and have tested them to the best of my ability/experience. Of course, if you find a better way to do things then by all means share by opening an [issue!][issue_tracker] My hope is to learn a good bit of coding as I make these scripts. I currently use them to extract data from output files and to tweak input files of larger jobs.
 
-These scripts my be used individually (_i.e.,_ if you're only interested in the lowest imaginary frequency) or with one another (_i.e.,_ to aggregate into a `csv` file).
+These scripts may be used individually or with one another. For example, if you are interested in the lowest imaginary frequency, you would run
 
-My hope is to learn a good bit of coding as I make these scripts. I currently use them to extract data from output files and to tweak input files of larger jobs.
+```zsh
+g09-lowest-imaginary-frequency.zsh "foo.out"
+```
+
+and the pertinent data point would be output to the command line. Alternatively, if you wish to aggregate data into a `csv` file for further analysis with a spreadsheet program you could utilize several of the scripts together (for an example of how to integrate the individual scripts with one another, see `g09-make-data` and `g09-generate-supporting-information`). All scripts work in format of
+
+```zsh
+g09-foo.zsh "foo.out"
+```
+
+with the exception of `g09-mulliken-charges.zsh` which can take a second argument of the atom whose Mulliken charge you wish to grab specifically.
 
 ## Tools
 
@@ -39,7 +49,7 @@ My hope is to learn a good bit of coding as I make these scripts. I currently us
 | `g09-sum-of-electronic-and-zero-point-energies`   | Sum of electronic and zero-point energies                                                           |
 | `g09-title-card`                                  | Title Card of input file                                                                            |
 
-## Compatability
+## Compatibility
 
 I typically stay on the bleeding edge of computing. I created these and have tested them using the following:
 
