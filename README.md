@@ -21,6 +21,7 @@ My hope is to learn a good bit of coding as I make these scripts. I currently us
 | `g09-lowest-imaginary-frequency`                  | Lowest converged imaginary frequency                                                                |
 | `g09-make-data`                                   | Generation of all of this information into a `csv` file for further analysis                        |
 | `g09-mean-of-alpha-and-beta-electrons`            | Mean of the alpha and beta electrons                                                                |
+| `g09-mulliken-charges`                            | Grab the Mulliken charges of a molecule                                                             |
 | `g09-mm-sanity-check--sum-of-all-charges`         | Molecular Mechanics sanity Check: sum of all charges                                                |
 | `g09-mm-sanity-check--sum-of-atom-charges`        | Molecular Mechanics sanity Check: sum of all atom charges                                           |
 | `g09-number-of-basis-functions`                   | Number of basis functions                                                                           |
