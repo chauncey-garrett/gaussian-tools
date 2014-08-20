@@ -15,10 +15,10 @@ function g09-mulliken-charges()
 			data=$(
 				awk '/Mulliken charges and spin densities:/,/Sum of Mulliken charges/ { print }' "${1}" |\
 					head -n -1 |\
-					tac |\
+					tail -r |\
 					sed -n '1,/               1          2/p' |\
 					head -n -1 |\
-					tac |\
+					tail -r |\
 					awk '{print $2, $3}' |\
 					column -t
 			)
@@ -28,10 +28,10 @@ function g09-mulliken-charges()
 			data=$(
 				awk '/Mulliken charges and spin densities:/,/Sum of Mulliken charges/ { print }' "${1}" |\
 					head -n -1 |\
-					tac |\
+					tail -r |\
 					sed -n '1,/               1          2/p' |\
 					head -n -1 |\
-					tac |\
+					tail -r |\
 					awk -v atom="${2}" '$0 ~ atom {print $3}'
 			)
 
@@ -46,10 +46,10 @@ function g09-mulliken-charges()
 			data=$(
 				awk '/Mulliken atomic charges:/,/Sum of Mulliken atomic charges/ { print }' "${1}" |\
 					head -n -1 |\
-					tac |\
+					tail -r |\
 					sed -n '1,/             1/p' |\
 					head -n -1 |\
-					tac |\
+					tail -r |\
 					awk '{print $2, $3}' |\
 					column -t
 			)
@@ -59,10 +59,10 @@ function g09-mulliken-charges()
 			data=$(
 				awk '/Mulliken atomic charges:/,/Sum of Mulliken atomic charges/ { print }' "${1}" |\
 					head -n -1 |\
-					tac |\
+					tail -r |\
 					sed -n '1,/             1/p' |\
 					head -n -1 |\
-					tac |\
+					tail -r |\
 					awk -v atom="${2}" '$0 ~ atom {print $3}'
 			)
 		fi
