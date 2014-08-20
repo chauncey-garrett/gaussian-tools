@@ -58,7 +58,7 @@ I typically stay on the bleeding edge of computing. I created these on OS X 10.9
 | zsh      | >= 5.0.2
 | python   | == 2.7.5
 | GNU awk  | >= 4.1.0
-| Gaussian | == Gaussian 09, Revision C.01
+| Gaussian | == Gaussian 09, Revision C.01 (there is β support for Rev.  D.01)
 
 ## Future work
 
