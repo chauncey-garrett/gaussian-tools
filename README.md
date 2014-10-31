@@ -74,6 +74,8 @@ Add it to your toolbox; If not, open an [issue!][issue_tracker]
 
   - [Chauncey Garrett][chauncey-garrett]
 
+[![](/img/donate.png)](http://chauncey.io/about/index.html#donate)
+
 [gaussian]:          http://www.gaussian.com "Gaussian"
 [issue_tracker]:     https://github.com/chauncey-garrett/gaussian-tools/issues "chauncey-garrett/gaussian-tools/issues"
 [chauncey-garrett]:  https://github.com/chauncey-garrett "chauncey-garrett"
