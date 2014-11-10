@@ -1,8 +1,8 @@
 # Gaussian Tools
 
-#### Useful input/output tools written for [Gaussian][gaussian] (an electronic structure program for computational chemistry).
+#### Useful input/output tools written for [Gaussian](http://www.gaussian.com "Gaussian") (an electronic structure program for computational chemistry).
 
-These tools work for me; they may not work for you. Since using this scripts can have a HUGE impact on your research, I suggest you have a look at each of them to full understand their implications to your work flow. That being said, I personally use them and have tested them to the best of my ability/experience. Of course, if you find a better way to do things then by all means share by opening an [issue!][issue_tracker] My hope is to learn a good bit of coding as I make these scripts. I currently use them to extract data from output files and to tweak input files of larger jobs.
+These tools work for me; they may not work for you. Since using this scripts can have a HUGE impact on your research, I suggest you have a look at each of them to full understand their implications to your work flow. That being said, I personally use them and have tested them to the best of my ability/experience. Of course, if you find a better way to do things then by all means share by opening an [issue!](https://github.com/chauncey-garrett/gaussian-tools/issues "chauncey-garrett/gaussian-tools/issues") My hope is to learn a good bit of coding as I make these scripts. I currently use them to extract data from output files and to tweak input files of larger jobs.
 
 These scripts may be used individually or with one another. For example, if you are interested in the lowest imaginary frequency, you would run
 
@@ -66,18 +66,12 @@ There are currently plans to incorporate the above abilities to output from the 
 
 ## Like it?
 
-Add it to your toolbox; If not, open an [issue!][issue_tracker]
+Add it to your toolbox; If not, open an [issue!](https://github.com/chauncey-garrett/gaussian-tools/issues "chauncey-garrett/gaussian-tools/issues")
 
 ## Author(s)
 
-*The author(s) of this toolset should be contacted via the [issue tracker][issue_tracker].*
+*The author(s) of this toolset should be contacted via the [issue tracker](https://github.com/chauncey-garrett/gaussian-tools/issues "chauncey-garrett/gaussian-tools/issues").*
 
-  - [Chauncey Garrett][chauncey-garrett]
+  - [Chauncey Garrett](https://github.com/chauncey-garrett "chauncey-garrett")
 
 [![](/img/donate.png)](http://chauncey.io/about/index.html#donate)
-
-[gaussian]:          http://www.gaussian.com "Gaussian"
-[issue_tracker]:     https://github.com/chauncey-garrett/gaussian-tools/issues "chauncey-garrett/gaussian-tools/issues"
-[chauncey-garrett]:  https://github.com/chauncey-garrett "chauncey-garrett"
-
-
