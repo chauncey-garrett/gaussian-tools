@@ -74,4 +74,4 @@ Add it to your toolbox; If not, open an [issue!](https://github.com/chauncey-gar
 
   - [Chauncey Garrett](https://github.com/chauncey-garrett "chauncey-garrett")
 
-[![](/img/donate.png)](http://chauncey.io/about/index.html#donate)
+[![](/img/tip.gif)](http://chauncey.io/about/index.html#tip)
