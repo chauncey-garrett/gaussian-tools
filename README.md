@@ -1,24 +1,56 @@
-# Gaussian Tools
+---
+layout: page_github_repo
+title: "Gaussian Tools"
+github_repo: gaussian-tools
+author: Chauncey Garrett
+published: true
+date:
+updated:
+noindex: false
+permalink: /projects/gaussian-tools/
+external-url:
+tags:
+- gaussian
+- github
+- zsh
+- python
+- chemistry
+- awk
+- sed
+- excel
+- quantum
+category: project
+description: Useful input/output tools written for Gaussian (an electronic structure program for computational chemistry).
+keywords: TODO
+sharing: true
+comments: false
+footer: true
+---
 
-#### Useful input/output tools written for [Gaussian](http://www.gaussian.com "Gaussian") (an electronic structure program for computational chemistry).
+* Table of Contents placeholder (via kramdown)
+{:toc}
+
+# Useful input/output tools written for [Gaussian](http://www.gaussian.com "Gaussian")[^gaussian]
+
+[^gaussian]: an electronic structure program for computational chemistry
 
 These tools work for me; they may not work for you. Since using this scripts can have a HUGE impact on your research, I suggest you have a look at each of them to full understand their implications to your work flow. That being said, I personally use them and have tested them to the best of my ability/experience. Of course, if you find a better way to do things then by all means share by opening an [issue!](https://github.com/chauncey-garrett/gaussian-tools/issues "chauncey-garrett/gaussian-tools/issues") My hope is to learn a good bit of coding as I make these scripts. I currently use them to extract data from output files and to tweak input files of larger jobs.
 
 These scripts may be used individually or with one another. For example, if you are interested in the lowest imaginary frequency, you would run
 
-```zsh
+```sh
 g09-lowest-imaginary-frequency.zsh "foo.out"
 ```
 
 and the pertinent data point would be output to the command line. Alternatively, if you wish to aggregate data into a `csv` file for further analysis with a spreadsheet program you could utilize several of the scripts together (for an example of how to integrate the individual scripts with one another, see `g09-make-data` and `g09-generate-supporting-information`). All scripts generally work in format of
 
-```zsh
+```sh
 g09-foo.zsh "foo.out"
 ```
 
 with the exception of `g09-mulliken-charges.zsh`, which can take a second argument of the atom whose Mulliken charge you wish to grab specifically.
 
-## Tools
+# Tools
 
 | Command                                           | Description
 | -----------                                       | -----------
@@ -49,7 +81,7 @@ with the exception of `g09-mulliken-charges.zsh`, which can take a second argume
 | `g09-sum-of-electronic-and-zero-point-energies`   | Sum of electronic and zero-point energies
 | `g09-title-card`                                  | Title Card of input file
 
-## Compatibility
+# Compatibility
 
 I typically stay on the bleeding edge of computing. I created these on OS X 10.9 and have tested them using the following:
 
@@ -60,15 +92,15 @@ I typically stay on the bleeding edge of computing. I created these on OS X 10.9
 | GNU awk  | >= 4.1.0
 | Gaussian | == Gaussian 09, Revision C.01 (there is β support for Rev.  D.01)
 
-## Future work
+# Future work
 
 There are currently plans to incorporate the above abilities to output from the `formchk` utility Gaussian provides. The rationale is that the output from that utility will not change between revisions of Gaussian, making the scripts far more reliable, faster to use and easier to maintain.
 
-## Like it?
+# Like it?
 
 Add it to your toolbox; If not, open an [issue!](https://github.com/chauncey-garrett/gaussian-tools/issues "chauncey-garrett/gaussian-tools/issues")
 
-## Author(s)
+# Author(s)
 
 *The author(s) of this toolset should be contacted via the [issue tracker](https://github.com/chauncey-garrett/gaussian-tools/issues "chauncey-garrett/gaussian-tools/issues").*
 
