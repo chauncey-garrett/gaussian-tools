@@ -10,18 +10,19 @@ noindex: false
 permalink: /projects/gaussian-tools/
 external-url:
 tags:
-- gaussian
-- github
-- zsh
-- python
-- chemistry
-- awk
-- sed
-- excel
-- quantum
+  - gaussian
+  - github
+  - zsh
+  - python
+  - chemistry
+  - awk
+  - sed
+  - excel
 category: project
 description: Useful input/output tools written for Gaussian (an electronic structure program for computational chemistry).
-keywords: TODO
+keywords:
+  - quantum chemistry
+  - computational chemistry
 sharing: true
 comments: false
 footer: true
