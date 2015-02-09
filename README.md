@@ -31,11 +31,11 @@ footer: true
 * Table of Contents placeholder (via kramdown)
 {:toc}
 
-# Useful input/output tools written for [Gaussian](http://www.gaussian.com "Gaussian")[^gaussian]
+# Useful input/output tools
+
+These tools were written for [Gaussian](http://www.gaussian.com "Gaussian").[^gaussian] They work for me; they may not work for you. Since using this scripts can have a HUGE impact on your research, please have a look at each of them to fully understand the implications of utilizing them in your work flow. That being said, I use them personally and have tested them to the best of my ability/experience. Of course, if you find a better way to do things then by all means share by opening an [issue!](https://github.com/chauncey-garrett/gaussian-tools/issues "chauncey-garrett/gaussian-tools/issues") I currently use them to extract data from output files and to tweak input files of larger jobs.
 
 [^gaussian]: an electronic structure program for computational chemistry
-
-These tools work for me; they may not work for you. Since using this scripts can have a HUGE impact on your research, I suggest you have a look at each of them to full understand their implications to your work flow. That being said, I personally use them and have tested them to the best of my ability/experience. Of course, if you find a better way to do things then by all means share by opening an [issue!](https://github.com/chauncey-garrett/gaussian-tools/issues "chauncey-garrett/gaussian-tools/issues") My hope is to learn a good bit of coding as I make these scripts. I currently use them to extract data from output files and to tweak input files of larger jobs.
 
 These scripts may be used individually or with one another. For example, if you are interested in the lowest imaginary frequency, you would run
 
@@ -46,10 +46,10 @@ g09-lowest-imaginary-frequency.zsh "foo.out"
 and the pertinent data point would be output to the command line. Alternatively, if you wish to aggregate data into a `csv` file for further analysis with a spreadsheet program you could utilize several of the scripts together (for an example of how to integrate the individual scripts with one another, see `g09-make-data` and `g09-generate-supporting-information`). All scripts generally work in format of
 
 ```sh
-g09-foo.zsh "foo.out"
+g09-foo.zsh "bar.out"
 ```
 
-with the exception of `g09-mulliken-charges.zsh`, which can take a second argument of the atom whose Mulliken charge you wish to grab specifically.
+with the exception of `g09-mulliken-charges.zsh`, which can take a second argument of the atom whose Mulliken charge you wish to obtain.
 
 # Tools
 
