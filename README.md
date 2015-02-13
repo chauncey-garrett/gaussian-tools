@@ -31,7 +31,7 @@ footer: true
 * Table of Contents placeholder (via kramdown)
 {:toc}
 
-# Useful input/output tools
+## Useful input/output tools
 
 These tools were written for [Gaussian](http://www.gaussian.com "Gaussian").[^gaussian] They work for me; they may not work for you. Since using this scripts can have a HUGE impact on your research, please have a look at each of them to fully understand the implications of utilizing them in your work flow. That being said, I use them personally and have tested them to the best of my ability/experience. Of course, if you find a better way to do things then by all means share by opening an [issue!](https://github.com/chauncey-garrett/gaussian-tools/issues "chauncey-garrett/gaussian-tools/issues") I currently use them to extract data from output files and to tweak input files of larger jobs.
 
@@ -51,7 +51,7 @@ g09-foo.zsh "bar.out"
 
 with the exception of `g09-mulliken-charges.zsh`, which can take a second argument of the atom whose Mulliken charge you wish to obtain.
 
-# Tools
+## Tools
 
 | Command                                           | Description
 | -----------                                       | -----------
@@ -82,7 +82,7 @@ with the exception of `g09-mulliken-charges.zsh`, which can take a second argume
 | `g09-sum-of-electronic-and-zero-point-energies`   | Sum of electronic and zero-point energies
 | `g09-title-card`                                  | Title Card of input file
 
-# Compatibility
+## Compatibility
 
 I typically stay on the bleeding edge of computing. I created these on OS X 10.9 and have tested them using the following:
 
@@ -93,15 +93,15 @@ I typically stay on the bleeding edge of computing. I created these on OS X 10.9
 | GNU awk  | >= 4.1.0
 | Gaussian | == Gaussian 09, Revision C.01 (there is β support for Rev.  D.01)
 
-# Future work
+## Future work
 
 There are currently plans to incorporate the above abilities to output from the `formchk` utility Gaussian provides. The rationale is that the output from that utility will not change between revisions of Gaussian, making the scripts far more reliable, faster to use and easier to maintain.
 
-# Like it?
+## Like it?
 
 Add it to your toolbox; If not, open an [issue!](https://github.com/chauncey-garrett/gaussian-tools/issues "chauncey-garrett/gaussian-tools/issues")
 
-# Author(s)
+## Author(s)
 
 *The author(s) of this toolset should be contacted via the [issue tracker](https://github.com/chauncey-garrett/gaussian-tools/issues "chauncey-garrett/gaussian-tools/issues").*
 
