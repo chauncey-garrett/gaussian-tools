@@ -107,4 +107,5 @@ Add it to your toolbox; If not, open an [issue!](https://github.com/chauncey-gar
 
   - [Chauncey Garrett](https://github.com/chauncey-garrett "chauncey-garrett")
 
-[![](/img/tip.gif)](http://chauncey.io/reader-support/)
+[![]({{page.url}}img/tip.gif)](http://chauncey.io/reader-support/)
+
