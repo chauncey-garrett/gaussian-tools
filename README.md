@@ -26,6 +26,7 @@ with the exception of `g09-mulliken-charges.zsh`, which can take a second argume
 | `g09-data-test`                                   | Used to format the null result of each of these tests
 | `g09-electronic-energy-after-SDF-is-done`         | Electronic energy after SDF is done
 | `g09-generate-supporting-information`             | Generation of supporting information into a hybrid HTML/MultMarkdown document
+| `g09-go-steps`                                    | Makes an xyz-trajectory file from all geometries (VMD-style)
 | `g09-lowest-imaginary-frequency`                  | Lowest converged imaginary frequency
 | `g09-make-data`                                   | Generation of all of this information into a `csv` file for further analysis
 | `g09-mean-of-alpha-and-beta-electrons`            | Mean of the alpha and beta electrons
