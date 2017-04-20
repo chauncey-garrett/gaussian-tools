@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 #
 # Obtain the all Cartesian coordinates of a Gaussian output file as a trajectory
 #
